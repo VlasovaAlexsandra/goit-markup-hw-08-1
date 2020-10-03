@@ -1,3 +1,21 @@
+.clients-icon-list {
+    @include for-size(tablet) {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    @include for-size(mobile-only) {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.icon-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;    
+}
+
 .icon-container {
     display: flex;
     justify-content: center;
@@ -9,13 +27,36 @@
 }
 
 .clients__item {         
-    width: 170px;
-    height: 90px;         
+    max-width: 210px;
+    height: 90px;    
+    // width: calc((100% - 30px * 1) / 2); 
+    // margin-right: 30px;    
     background-color: #FFFFFF;
     border: 1px solid #AFB1B8;
     border-radius: 4px;   
     
     transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        border: 1px solid $accent-text-color;
+        transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    // @include for-size(mobile) {
+    //     &:nth-child(2n) {
+    //         margin-right: 0;
+    //     }
+    // }
+
+    @include for-size(tablet) {
+        max-width: 226px;
+        // width: calc((100% - 30px * 2) / 3);
+    }
+    
+    @include for-size(desktop) {
+        max-width: 170px;
+    }
 }
 
 .clients__item .clients__icon {    
