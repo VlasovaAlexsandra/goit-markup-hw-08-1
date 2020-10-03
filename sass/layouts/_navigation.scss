@@ -1,3 +1,9 @@
+.navigation-wrap {
+    @include for-size(mobile-only) {
+        display: none;
+    }
+}
+
 .navigation {
     display: flex;  
     align-items: center; 
