@@ -1,0 +1,28 @@
+.form-section {
+    margin-left: 93px;
+}
+
+.form-footer {
+    display: flex;
+}
+
+.form-footer__field {   
+    display: flex;
+    margin-right: 12px;
+}
+
+.form-footer__field input {
+    width: 358px;    
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    background-color: transparent;
+    padding-left: 12px;
+}
+
+.form-footer__button {
+    display: flex;
+}
+
+.form-footer__icon {
+    margin-left: 10px;
+}
