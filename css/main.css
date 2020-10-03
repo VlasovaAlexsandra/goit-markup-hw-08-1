@@ -506,9 +506,30 @@ img {
 
 .list__comands {
   background-color: #FFFFFF;
-  max-width: 270px;
+  max-width: 450px;
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 768px) {
+  .list__comands {
+    max-width: 354px;
+    width: calc((100% - 30px * 1) / 2);
+    margin-right: 30px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .list__comands {
+    max-width: 270px;
+  }
+}
+
+@media (min-width: 768px) {
+  .comand__flexbox {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .list__title {
