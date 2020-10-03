@@ -1,6 +1,25 @@
 .list__prioritet {
-    max-width: 270px;
+    max-width: 450px;
     flex-grow: 1;
+
+    @include for-size(tablet) {
+        max-width: 354px;
+    }
+
+    @include for-size(desktop) {
+        max-width: 270px;
+    }
+}
+
+.prioritet__flexbox {
+    @include for-size(tablet) {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    @include for-size(desktop) {
+        display: flex;
+    }
 }
 
 .list .list__prioritet::before {
@@ -31,6 +50,54 @@
     background-image: url(../images/icons/i-astronaut.svg);
 }
 
-.content-box:not(:last-child) {
-    margin-right: 30px;
+.list .content-box {
+    margin-right: 0;
+    margin-bottom: 0;
+
+    @include for-size(mobile-only) {
+        &:not(:last-child) {
+        margin-bottom: 30px;
+        }
+    }
+
+
+    @include for-size(tablet) {
+        &:nth-child(2n+1) {
+            margin-right: 30px;
+        }
+    }
+
+    @include for-size(tablet-only) {
+        &:nth-child(-n + 2) {
+            margin-bottom: 30px;
+        }  
+    }
+        
+    @include for-size(desktop) {
+        &:not(:last-child) {
+            margin-right: 30px;
+        }
+    }
 }
+
+.list.content-box {
+    @include for-size(desktop) {
+        margin-bottom: 0;
+    }
+}
+
+   
+
+
+.list .list__text {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.list .list__title {
+    @include for-size(mobile-only) {
+        text-align: center;
+        }
+}
+
+    
