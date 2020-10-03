@@ -13,10 +13,14 @@ textarea {
 }
 
 .form-modal {
-    width: 528px;
+    width: 450px;
     margin-left: auto;
     margin-right: auto;
     padding: 40px;
+
+    @include for-size(desktop) {
+        width: 528px;
+    }
 }
 
 .form-modal__field {
@@ -107,11 +111,25 @@ textarea {
     justify-content: center;
     margin-top: 20px;
     margin-bottom: 30px;
-    font-size: 14px;
+    // font-size: 12px;
+    // line-height: 1.71;    
+    // letter-spacing: 0.03em;
+
+    color: #757575;
+
+    
+}
+
+.checkbox-text {
+    font-size: 12px;
     line-height: 1.71;    
     letter-spacing: 0.03em;
 
-    color: #757575;
+    @include for-size(desktop) {
+        font-size: 14px;
+        line-height: 1.71;
+    }
+
 }
 
 .checkbox-text::before {
@@ -121,9 +139,13 @@ textarea {
     height: 16px;
     border: 2px solid #212121;
     border-radius: 2px;   
-    margin-right: 8px; 
+    margin-right: 5px; 
     vertical-align: middle;
     transition: $transition-background-color;
+
+    @include for-size(desktop) {
+        margin-right: 8px;
+    }
 }
 
 .checkbox:checked + .checkbox-text::before {
@@ -140,6 +162,14 @@ textarea {
 
 .checkbox-label-link {
     color: $accent-text-color;
+    font-size: 12px;
+    line-height: 1.71;    
+    letter-spacing: 0.03em;
+
+    @include for-size(desktop) {
+        font-size: 14px;
+        line-height: 1.71;
+    }
 }
 
 .form-modal__button { 
@@ -155,8 +185,15 @@ textarea {
     line-height: 1.87;    
     letter-spacing: 0.06em;  
     text-align: center;
-    margin-left: 125px;
     padding: 10px 55px;
 
     cursor: pointer;
+}
+
+.modal__btn {
+    @include for-size(mobile) {
+        display: flex;
+        justify-content: center;
+        
+    }
 }

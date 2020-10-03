@@ -20,8 +20,13 @@
     left: 50%;
     transform: translate(-50%, -50%);
 
-    min-width: 528px;
-    min-height: 581px;  
+    min-width: 450px;
+    min-height: 609px;
+    
+    @include for-size(desktop) {
+        min-width: 528px;
+        min-height: 581px;
+    }
 
     background: #FFFFFF;      
     border-radius: 4px; 
