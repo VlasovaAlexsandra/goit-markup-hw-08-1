@@ -347,6 +347,18 @@ img {
   padding-bottom: 0px;
 }
 
+@media (max-width: 480px) {
+  .section.no-padding {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .section.no-padding {
+    display: none;
+  }
+}
+
 .section__title {
   margin-top: 0px;
   margin-bottom: 50px;
@@ -360,6 +372,10 @@ img {
 
 .entry-title {
   display: none;
+}
+
+.proff__content-box:not(:last-child) {
+  margin-right: 30px;
 }
 
 .list__prioritet {

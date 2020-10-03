@@ -11,6 +11,14 @@
 .section.no-padding {
     padding-top: 0px;
     padding-bottom: 0px;
+
+    @include for-size(mobile-only) {
+        display: none;
+    }
+
+    @include for-size(tablet-only) {
+        display: none;
+    }
 }
 
 .section__title {
@@ -27,4 +35,8 @@
 
 .entry-title {
     display: none;
+}
+
+.proff__content-box:not(:last-child) {
+    margin-right: 30px;
 }
