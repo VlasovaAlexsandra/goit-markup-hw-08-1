@@ -1,20 +1,67 @@
 .footer {
-    display: flex;
     background-color: $bgr-footer;
     padding-top: 60px;
     padding-bottom: 60px;   
+
+    @include for-size(tablet) {
+        display: flex;
+    }
+
+
+    @include for-size(desktop) {
+        display: flex;
+    }
+    
+    
+}
+
+.address-logo .logo {
+    margin-right: 0;
+
+    @include for-size(desktop) {
+        margin-right: 93px;
+    }
+    
 }
 
 .footer .address-logo {
     width: 230px;
     padding: 0;
-    margin-right: 70px;
+    // margin-right: 70px;
     font-size: 14px;
+
+    @include for-size(mobile) {
+        padding-bottom: 60px;
+        width: 100%;
+    }
+
+    @include for-size(desktop) {
+        width: 230px;
+        padding: 0;
+        margin-right: 70px;
+        font-size: 14px;
+    }
 }
 
 .common {
     display: block;   
     padding: 0;
+}
+
+.footer .common-box {
+    @include for-size(mobile) {
+        width: 100%;
+    }
+} 
+
+.common__item-list {
+    display: flex;
+
+    @include for-size(mobile) {
+        justify-content: center;
+        padding-bottom: 60px;
+    }
+
 }
 
 .common__title {
@@ -62,6 +109,7 @@
 .address__link {
     color: $address-text-color;
     text-decoration: none;
+    margin-bottom: 8px;
 }
 
 .logo--white {
@@ -69,10 +117,43 @@
 }
 
 .flex-container {
-    display: flex; 
-    width: 1200px;
+    max-width: 480px;
+    
     margin-left: auto;
     margin-right: auto;
     padding-right: 15px;
     padding-left: 15px;
+
+    @include for-size(mobile-only) {
+        text-align: center;
+    }
+
+    @include for-size(tablet-only) {
+        display: flex; 
+        // flex-direction: row;
+        // justify-content: space-between;
+        flex-wrap: wrap;
+        text-align: center;
+        max-width: 768px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    @include for-size(desktop) {
+        display: flex; 
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
 }
+
+// .flex-container {
+//     @include for-size(tablet-only) {
+//         display: flex;
+//         justify-content: space-between;
+//     }
+// }
