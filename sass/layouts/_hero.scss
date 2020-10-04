@@ -1,53 +1,42 @@
-.hero {   
-    height: 600px;
-    margin-right: auto;
-    margin-left: auto;
-    background-color: $bgr-hero;
-    background-image: linear-gradient(
-        to right, 
-        rgba(47, 48, 58, 0.4),  
-        rgba(47, 48, 58, 0.4)
-        ),
-        url(../images/hero-fon.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    text-align: center;
-    padding-top: 200px; 
-    padding-bottom: 200px;
-    text-align: center;   
-}
-
-.hero__title {
-    // display: flex;
-    max-width: 360px;
-    margin-top: 0px;
-    margin-bottom: 30px;
-    
-    color: $hero-text-color;
-  
-    font-weight: 900;
-    font-size: 26px;
-    line-height: 1.62;    
-    text-align: center;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;  
-
-    @include for-size(desktop) {
-        width: 696px;
-        font-size: 44px;
-        line-height: 1.36; 
-    }
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: $bgr-hero;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-fon.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
 }
 
 .hero-wrap {
-    justify-content: center;
-    align-items: center;
-    max-width: 360px;
-    margin-right: auto;
-    margin-left: auto;
+  max-width: 360px;
+  margin-right: auto;
+  margin-left: auto;
 
-    @include for-size(desktop) {
-        width: 696px;
-    }
+  @include for-size(desktop) {
+    max-width: 696px;
+  }
+}
+
+.hero__title {
+  margin-top: 0px;
+  margin-bottom: 30px;
+  color: $hero-text-color;
+
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 1.62;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  @include for-size(desktop) {
+    font-size: 44px;
+    line-height: 1.36;
+  }
 }

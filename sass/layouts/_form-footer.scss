@@ -1,79 +1,55 @@
 .form-section {
-    @include for-size(mobile) {
-        width: 100%;
-    }
-    
+  @include for-size(mobile) {
+    width: 100%;
+  }
 
-    @include for-size(desktop) {
-        margin-left: 93px;
-    }
+  @include for-size(desktop) {
+    margin-left: 93px;
+  }
 }
 
 .form-footer {
-    @include for-size(desktop) {
-        display: flex;
-    }
+  @include for-size(tablet) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @include for-size(desktop) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
-.form-footer__field {   
-    @include for-size(mobile) {
-        // justify-content: center;
-        // padding-bottom: 20px;
-    }
-    
+.form-footer__field {
+  max-width: 450px;
+  width: 100%;
+  border: 1px solid rgba(190, 172, 172, 0.3);
+  border-radius: 4px;
+  background-color: transparent;
+  padding-left: 12px;
+  height: 50px;
 
-    @include for-size(desktop) {
-        display: flex;
-        margin-right: 12px;
-    }
-}
-
-.form-footer__field input {
-    max-width: 450px;    
-
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 4px;
-    background-color: transparent;
-    padding-left: 12px;
-
-    @include for-size(mobile-only) {
-        height: 50px;
-        margin-bottom: 20px;
-        
-    }
-
-    @include for-size(tablet-only) {
-        height: 50px;
-        margin-bottom: 20px;
-        
-    }
-
-    @include for-size(desktop) {
-        // height: 50px;
-        margin-bottom: 0;
-        width: 358px;
-    }
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 20px;
+  }
 }
 
 .form-footer__btn {
-    @include for-size(mobile) {
-        display: flex;
-        justify-content: center;
-        
-    }
-    
+  @include for-size(mobile) {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .form-footer__button {
-    display: flex;
+  display: inline-flex;
 
-    @include for-size(mobile) {
-        margin-right: 0;
-
-    }
+  @include for-size(desktop) {
+    margin-left: 12px;
+  }
 }
 
-
 .form-footer__icon {
-    margin-left: 10px;
+  margin-left: 10px;
 }
