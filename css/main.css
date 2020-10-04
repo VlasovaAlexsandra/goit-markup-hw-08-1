@@ -349,7 +349,7 @@ img {
 .hero-wrap {
   justify-content: center;
   align-items: center;
-  width: 360px;
+  max-width: 360px;
   margin-right: auto;
   margin-left: auto;
 }
