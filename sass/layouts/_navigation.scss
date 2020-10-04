@@ -1,17 +1,39 @@
-.navigation-wrap {
-    @include for-size(mobile-only) {
+.site-nav.list {
+    @media screen and (min-width: 319px) and (max-width: 767px) {
         display: none;
-    }
+      }
+}
+
+.contacts-item {
+    @media screen and (min-width: 319px) and (max-width: 767px) {
+        display: none;
+      }
 }
 
 .navigation {
     display: flex;  
     align-items: center; 
-    align-items: baseline;   
+    align-items: baseline;    
 }
 
 .site-nav {
     display: flex;   
+}
+
+.contact__item {
+    @include for-size(tablet) {
+        margin-left: 70px;
+
+        &:not(:last-child) {
+            margin-bottom: 10px;    
+        }
+    }
+
+    @include for-size(desktop) {
+        &:not(:last-child) {
+            margin-right: 50px;    
+        }
+    }
 }
 
 .site-nav__item:not(:last-child) {

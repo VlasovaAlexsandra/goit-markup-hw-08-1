@@ -1,10 +1,13 @@
-
 .contacts-item {    
     margin-left: auto;
 }
 
 .contacts {    
-    display: flex;     
+    display: flex; 
+
+    @include for-size(tablet) {
+        flex-wrap: wrap;
+    }    
 }
 
 .contacts__link {
