@@ -83,6 +83,16 @@
     color: $accent-text-color;
 }
 
+.menu-nav .site-nav__link:hover, 
+.menu-nav .site-nav__link:focus {
+    color: $accent-text-color;
+    transition: $transition-color;
+}
+
+.menu-nav .site-nav__link.current {
+    color: $accent-text-color;
+}
+
 .site-nav__border {
     position: relative;
 }
