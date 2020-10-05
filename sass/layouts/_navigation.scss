@@ -108,10 +108,10 @@
     background-color: $accent-text-color;
 
     @media screen and (min-width: 768px) and (max-width: 1199px) {
-        bottom: -35px;
+        bottom: -39px;
     }
 
     @include for-size(desktop) {
-        bottom: -28px;
+        bottom: -32px;
     }
 }
