@@ -3,11 +3,13 @@
 }
 
 .contacts {    
-    display: flex; 
-
-    @include for-size(tablet) {
-        flex-wrap: wrap;
-    }    
+    // @include for-size(tablet) {
+    //     flex-wrap: wrap;
+    // }  
+    
+    @include for-size(desktop) {
+        display: flex;
+    }  
 }
 
 .contacts__link {
