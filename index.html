@@ -18,7 +18,7 @@
               <a href="WebStudio" class="logo"><span class="logo--accent">Web</span>Studio</a>
               <button 
                 type="button" 
-                class="menu-button is-open" 
+                class="menu-button" 
                 aria-expanded="false"
                 aria-controls="menu-container"
                 data-menu-button>
@@ -57,7 +57,7 @@
             </nav>
         </div>
         
-        <div class="menu-container is-open" id="menu-container" data-menu>
+        <div class="menu-container" id="menu-container" data-menu>
           <ul class="list menu-nav">
             <li class="site-nav__item"><a href="Студия" class="site-nav__border site-nav__link current">Студия</a></li>
             <li class="site-nav__item"><a href="./portfolio.html" class="site-nav__border site-nav__link">Портфолио</a></li>
@@ -136,15 +136,37 @@
           <h2 class="section__title">Чем мы занимаемся</h2>
           <ul class="proff list flexbox">
             <li class="img proff__content-box list__thumb">
-              <img src="./images/box-1.jpg" alt="примеры работ" width="370" />
+              <picture> 
+                <sourse srcset="
+                  ./images/desktop/studio/tablet_coding@1x.png 1x,
+                  ./images/desktop/studio/tablet_coding@2x.png 2x,
+                  ./images/desktop/studio/tablet_coding@3x.png 3x" 
+                  media="(min-width: 1200)"/> 
+                <img src="./images/box-1.jpg" alt="примеры работ" width="370"/>
+              </picture>
+              
               <p class="list__label">ДЕСКТОПНЫЕ ПРИЛОЖЕНИЯ</p>
             </li>
             <li class="img proff__content-box list__thumb">
-              <img src="./images/box-2.png" alt="примеры работ" width="370" />
+              <picture> 
+                <sourse srcset="
+                  ./images/desktop/studio/smart_model@1x.png 1x,
+                  ./images/desktop/studio/smart_model@2x.png 2x,
+                  ./images/desktop/studio/smart_model@3x.png 3x"
+                  media="(min-width: 1200)"/>
+                <img src="./images/box-2.png" alt="примеры работ" width="370"/>
+              </picture>
               <p class="list__label">МОБИЛЬНЫЕ ПРИЛОЖЕНИЯ</p>
             </li>
             <li class="img proff__content-box list__thumb">
-              <img src="./images/box-3.png" alt="примеры работ" width="370" />
+              <picture> 
+                <sourse srcset="
+                  ./images/desktop/studio/color_schema@1x.png 1x,
+                  ./images/desktop/studio/color_schema@2x.png 2x,
+                  ./images/desktop/studio/color_schema@3x.png 3x"
+                  media="(min-width: 1200)"/>
+                <img src="./images/box-3.png" alt="примеры работ" width="370"/>
+              </picture>
               <p class="list__label">ДИЗАЙНЕРСКИЕ РЕШЕНИЯ</p>
             </li>
           </ul>
