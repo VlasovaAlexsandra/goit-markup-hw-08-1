@@ -110,7 +110,7 @@ img {
 }
 
 .page-header--border {
-  border: 1px solid #ECECEC;
+  border-bottom: 2px solid #ECECEC;
 }
 
 .btn {
